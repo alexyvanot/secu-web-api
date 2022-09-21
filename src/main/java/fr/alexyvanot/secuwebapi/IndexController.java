@@ -21,8 +21,8 @@ public class IndexController {
 		userRepo.save(user);
 	}
 
-	@GetMapping("/user")
-	public Iterable<User> getUtilisateurs() {
+	@GetMapping("/users")
+	public Iterable<User> getUsers() {
 		return userRepo.findAll();
 	}
 
@@ -34,7 +34,7 @@ public class IndexController {
 		return user;
 	}
 
-	public UserRepo getUtilisateurRepository() {
+	public UserRepo getUserRepo() {
 		return userRepo;
 	}
 
