@@ -10,9 +10,9 @@ public class IndexController {
 
     @GetMapping("/")
     public User index() {
-        User utilisateur = new User();
-        utilisateur.setNom("Toto");
-        utilisateur.setPrenom("Tata");
-        return utilisateur;
+        User user = new User();
+        user.setNom("Toto");
+        user.setPrenom("Tata");
+        return user;
     }
 }
