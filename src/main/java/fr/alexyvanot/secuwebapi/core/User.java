@@ -1,23 +1,40 @@
 package fr.alexyvanot.secuwebapi.core;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
-    private String nom;
-    private String prenom;
+	@Id
+	@GeneratedValue
+	private int userID;
+	private String lastName;
+	private String firstName;
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public void setIdUser(int userID) {
+		this.userID = userID;
+	}
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
+	public int getIdUser() {
+		return userID;
+	}
 
-    public String getNom() {
-        return nom;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public String getPrenom() {
-        return prenom;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
 }
